@@ -27,6 +27,7 @@ const percentage = document.getElementById('percentage');
 const leftBracket = document.getElementById('leftBracket');
 const rightBracket = document.getElementById('rightBracket');
 const check  = document.getElementById('check');
+const p  = document.getElementById('p');
 
 
 elBtn.addEventListener('click', () =>{
@@ -86,9 +87,6 @@ percentage.addEventListener('click', (e) =>{
   output.append(e.target.innerHtml = '%');
 })
 
-percentage.addEventListener('click', (e) =>{
-  output.append(e.target.innerHtml = '%');
-})
 
 xbtn.addEventListener('click', () =>{
   let arr = Array.from(output.textContent);
@@ -129,4 +127,7 @@ rightBracket.addEventListener('click', (e) =>{
 
 check.addEventListener('click', (e) =>{
   output.innerText = Math.sqrt(output.innerText);
+})
+p.addEventListener('click', () =>{
+  output.innerText = Math.PI(output.innerText);
 })
