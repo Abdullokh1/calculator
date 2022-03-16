@@ -5,13 +5,82 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-  <link rel="stylesheet" href="css/col.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  
+  <div class="main-wrapper">
+    <div class="output-wrapper">
+      <p class="output" id="output"></p>
+    </div>
+    <div class="inner-part pt-2">
+       <div class="d-flex  btn-wrapper">
+         <button class="col-3 num-btn" id="seven">7</button>
+         <button class="col-3 num-btn" id="eight">8</button>
+         <button class="col-3 num-btn" id="nine">9</button>
+         <button class="col-3 num-btn" id="ac">AC</button>
+       </div>
+       <div class="d-flex  btn-wrapper pt-4">
+         <button class="col-3 num-btn" id="four">4</button>
+         <button class="col-3 num-btn" id="five">5</button>
+         <button class="col-3 num-btn" id="six">6</button>
+         <button class="col-3 num-btn left-btn" id="leftBtn"><i class='bx bx-chevron-left'></i></button>
+        </div>
+        <div class="d-flex align-items-center btn-wrapper btn-equal-wrap pt-4">
+          <button class="col-3 num-btn" id="one">1</button>
+          <button class="col-3 num-btn" id="two">2</button>
+          <button class="col-3 num-btn" id="three">3</button>
+          <div class="col-12">
+            <button class="col-3 equal-btn num-btn" id="equal">=</button>
+          </div>
+        </div>
+        <div class="d-flex align-items-center btn-wrapper pt-4">
+          <button class="col-3 num-btn" id="xBtn"><i class='bx bxs-tag-x'></i></button>
+          <button class="col-3 num-btn" id="zero">0</button>
+          <button class="col-3 num-btn" id="dot">.</button>
+        </div>
+        <div class="d-flex  btn-wrapper pt-4">
+          <button class="col-3 num-btn" id="divide"><i class="fa fa-divide"></i></button>
+          <button class="col-3 num-btn" id="multiplication">x</button>
+          <button class="col-3 num-btn" id="minus">-</button>
+          <button class="col-3 num-btn" id="plus">+</button>
+        </div>
+    </div>
+
+    <div class="extra-div" id="hideContent">
+      <div class="d-flex  btn-wrapper pt-3">
+        <button class="col-4 num-btn" id="sin">sin</button>
+        <button class="col-4 num-btn" id="cos">cos</button>
+        <button class="col-4 num-btn" id="tan">tan</button>
+      </div>
+      <div class="d-flex  btn-wrapper pt-4">
+        <button class="col-4 num-btn" id="x!">x!</button>
+        <button class="col-4 num-btn" id="p">p</button>
+        <button class="col-4 num-btn" id="log">log</button>
+       </div>
+       <div class="d-flex  btn-wrapper pt-4">
+        <button class="col-4 num-btn" id="leftBracket">(</button>
+        <button class="col-4 num-btn" id="rightBracket">)</button>
+        <button class="col-4 num-btn" id="check"><i class='bx bx-check'></i></button>
+       </div>
+       <div class="d-flex  btn-wrapper pt-4">
+        <button class="col-4 num-btn" id="e">e</button>
+        <button class="col-4 num-btn" id="percentage">%</button>
+        <button class="col-4 num-btn" id="xy">xy</button>
+       </div>
+
+    </div>
+  </div>
+ 
+
+ 
 
   <script src="js/main.js"></script>
 </body>
